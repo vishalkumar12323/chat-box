@@ -1,10 +1,10 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "index.js",
-  "type": "module",
+  "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node build/index.js",
+    "dev": "tsc-watch --onSuccess \"npm start\""
   },
   "keywords": [],
   "author": "",
@@ -15,11 +15,16 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "helmet": "^8.0.0",
     "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
     "socket.io": "^4.8.1"
   },
   "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/morgan": "^1.9.9",
     "nodemon": "^3.1.9",
-    "prisma": "^6.4.1"
+    "prisma": "^6.4.1",
+    "typescript": "^5.7.3"
   }
 }
